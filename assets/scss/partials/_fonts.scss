@@ -1,0 +1,30 @@
+@font-face {
+	font-weight: 300;
+    font-family: 'Gotham';
+    src: url('../fonts/gotham/light/GothamLight.eot');
+    src: url('../fonts/gotham/light/GothamLight.eot') format('embedded-opentype'),
+         url('../fonts/gotham/light/GothamLight.woff2') format('woff2'),
+         url('../fonts/gotham/light/GothamLight.woff') format('woff'),
+         url('../fonts/gotham/light/GothamLight.ttf') format('truetype'),
+         url('../fonts/gotham/light/GothamLight.svg#GothamLight') format('svg');
+}
+@font-face {
+	font-weight: 400;
+    font-family: 'Gotham';
+    src: url('../fonts/gotham/book/GothamBook.eot');
+    src: url('../fonts/gotham/book/GothamBook.eot') format('embedded-opentype'),
+         url('../fonts/gotham/book/GothamBook.woff2') format('woff2'),
+         url('../fonts/gotham/book/GothamBook.woff') format('woff'),
+         url('../fonts/gotham/book/GothamBook.ttf') format('truetype'),
+         url('../fonts/gotham/book/GothamBook.svg#GothamBook') format('svg');
+}
+@font-face {
+	font-weight: 700;
+    font-family: 'Gotham';
+    src: url('../fonts/gotham/medium/GothamMedium.eot');
+    src: url('../fonts/gotham/medium/GothamMedium.eot') format('embedded-opentype'),
+         url('../fonts/gotham/medium/GothamMedium.woff2') format('woff2'),
+         url('../fonts/gotham/medium/GothamMedium.woff') format('woff'),
+         url('../fonts/gotham/medium/GothamMedium.ttf') format('truetype'),
+         url('../fonts/gotham/medium/GothamMedium.svg#GothamMedium') format('svg');
+}

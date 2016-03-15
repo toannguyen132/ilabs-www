@@ -6,4 +6,8 @@ body{
 	line-height: 1.4em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-family: $gotham;
+}
+[ng-click], a{
+	cursor: pointer;
 }

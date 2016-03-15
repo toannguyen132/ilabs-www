@@ -1,0 +1,30 @@
+header{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: $padding-df 0;
+	.menu-trigger{
+		float: right;
+		display: inline-block;
+	}
+	.hamburger{
+		display: inline-block;
+		width: $padding-wide;
+		height: $padding-wide;
+		position: relative;
+		.bar{
+			width: 100%;
+			height: 2px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #3a3a3a;
+		}
+		.top{
+			transform: translate(0, 10px);
+		}
+		.bottom{
+			transform: translate(0, 18px);
+		}
+	}
+}

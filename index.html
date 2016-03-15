@@ -1,13 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="demo">
 <head>
-	<title>Frontend starter kit</title>
+	<title>Ilabs www</title>
 	<meta name="charset" content="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="public/css/bootstrap.css">
 	<link rel="stylesheet" href="public/css/app.css">
 </head>
 <body>
+	<header>
+		<div class="container">
+			<div class="menu-trigger">
+				<a href="#" class="hamburger">
+					<div class="bar top"></div>
+					<div class="bar bottom"></div>
+				</a>
+			</div>
+			<div class="logo">
+				<img src="public/img/logo.svg" alt="Interactive Labs">
+			</div>	
+		</div>
+	</header>
+	<div class="landing">
+		<div class="container">
+			<div class="welcome">
+				<h1>We’re  <br>
+				Interactivelabs</h1>
+				<p class="trigger"><a class="trigger-intro"><img src="public/img/oval.svg" alt="oval"></a> &nbsp;&nbsp;
+				Could you please click on the circle to help us fill up colors?</p>
+			</div>
+		</div>
+		<div class="object-parallax" document-parralax>
+			<div class="grayscale overlay">
+				<div class="object-1 object-container" speed="40">
+					<div class="object-inner">
+						<img src="public/img/lingtning.png" srcset="public/img/lingtning2x.png 2x" alt="">
+					</div>
+				</div>
+				<div class="object-2 object-container" speed="20">
+					<div class="object-inner">
+						<img src="public/img/book.png" srcset="public/img/book2x.png 2x" alt="">
+					</div>
+				</div>
+				<div class="object-3 object-container" speed="15">
+					<div class="object-inner">
+						<img src="public/img/pencil.png" srcset="public/img/pencil2x.png 2x" alt="">
+					</div>
+				</div>
+				<div class="shadow object-container" speed="15">
+					<div class="object-inner">
+						<img src="public/img/shadow.png" srcset="public/img/shadow2x.png 2x" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="color overlay clip-path">
+				<div class="object-1 object-container" object-parralax speed="40">
+					<div class="object-inner">
+						<img src="public/img/lingtning.png" srcset="public/img/lingtning2x.png 2x" alt="">
+					</div>
+				</div>
+				<div class="object-2 object-container" object-parralax speed="20">
+					<div class="object-inner">
+						<img src="public/img/book.png" srcset="public/img/book2x.png 2x" alt="">
+					</div>
+				</div>
+				<div class="object-3 object-container" object-parralax speed="15">
+					<div class="object-inner">
+						<img src="public/img/pencil.png" srcset="public/img/pencil2x.png 2x" alt="">
+					</div>
+				</div>
+				<div class="shadow object-container" object-parralax speed="15">
+					<div class="object-inner">
+						<img src="public/img/shadow.png" srcset="public/img/shadow2x.png 2x" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<svg width="0" height="0" id="clipmark">
+	  <defs>
+	    <clipPath id="clip_default">
+	      <circle cx="0" cy="0" r="100" />
+	    </clipPath>
+	    <clipPath id="clip_after">
+	      <circle cx="0" cy="0" r="3000" />
+	    </clipPath>
+	  </defs>
+	</svg>
+	<script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
 	<script src="public/js/bundle.js"></script>
 </body>
 </html>

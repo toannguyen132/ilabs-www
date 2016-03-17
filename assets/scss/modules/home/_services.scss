@@ -1,0 +1,43 @@
+.services{
+	padding: 130px 0 $padding-wide 0;
+}
+.service-list{
+	float: right;
+	padding: 110px 0;
+
+	.service-item{
+		display: inline-block;
+		margin: 0 $padding-wide;
+		text-align: center;
+		font-weight: 700;
+		p{
+			margin: $padding-df 0 0 0;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+.service-heading{
+	float: left;
+	position: relative;
+	padding: 108px 0;
+	background-color: #fff;
+	width: 280px;
+	.flash{
+		position: absolute;
+		top: 50%; 
+		left: -30px;
+		transform: translateY(-50%);
+	}
+	.text{
+		display: block;
+		margin: 0;
+		height: 83px;
+		color: $heading;
+	    transform: translateX(181px);
+	    font-size: 48px;
+	    line-height: 1em;
+	    font-weight: 300;
+	}
+}

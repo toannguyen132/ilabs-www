@@ -16,30 +16,42 @@
 	}
 }
 
+.object-parallax{
+	.backdrop{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		transform: scale(0.8);
+	}
+}
+
 .object-parallax {
 	$x: 0;
 	$y: 30%;
 	.clip-path{
 		/* new function syntax for webkit browsers */
-		shape-inside: circle(0 at $x $y);
+		// shape-inside: circle(0 at $x $y);
 		clip-path: circle(0 at $x $y);
 
 		/* old function syntax in Blink */
-		shape-inside: circle($x, $y, 0);
+		// shape-inside: circle($x, $y, 0);
 		clip-path: circle($x, $y, 0);
 
-		shape-padding: 15px;
+		// shape-padding: 15px;
 	  	transition: 1s all;
 	  	transform: translate3d(0,0,0);
 	}
 	&.active .clip-path{
 		$amount: 140%;
 		/* new function syntax for webkit browsers */
-		shape-inside: circle($amount at $x $y);
+		// shape-inside: circle($amount at $x $y);
 		clip-path: circle($amount at $x $y);
 
 		/* old function syntax in Blink */
-		shape-inside: circle($x, $y, $amount);
+		// shape-inside: circle($x, $y, $amount);
 		clip-path: circle($x, $y, $amount);
 	}
 }
@@ -58,6 +70,11 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	.object-inner{
+		position: relative;
+		transform: translate(50px, 50px);
 	}
 
 	.grayscale{
@@ -93,3 +110,13 @@
 		left: 50%;
 	}
 }
+
+.section-heading{
+	font-weight: 300;
+	font-size: 4.8rem;
+	color: $heading;
+	letter-spacing: 1.2px;
+	margin: 0;
+}
+
+@import "home/services";

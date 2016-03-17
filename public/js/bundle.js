@@ -18,9 +18,7 @@ angular.module('demo', [])
 			$this = this;
 			$('.trigger-intro').click(function(){
 				$($element).addClass('active');
-				$timeout(function(){
-					$this.triggered = true;
-				}, 1000);
+	    		$('body').addClass('finish-intro');
 			});
 		}
 	}
@@ -41,17 +39,24 @@ angular.module('demo', [])
 	    		.domain([0, $(parent).height()])
 	    		.range([1,-1]);
 
+	    	// parralax
+	    	$(document).on('mousemove', function(event){
+	    		// var diff = calcDiff( event.pageX, event.pageY );
+	    		// TweenMax.to( child ,0.1, { attr: {
+	    		// 		style: "transform: translate(" + x( event.pageX )*speed + "px, " + y( event.pageY )*speed + "px)"
+	    		// 	}
+	    		// });
+	    		TweenMax.to( child, 0.5, {
+	    			x: x( event.pageX )*speed,
+	    			y: y( event.pageY )*speed,
+	    			force3D:false
+	    		})
+	    	});	
+
 	    	// console.log(controller);
 	    	scope.$watch( function(){ return controller.triggered }, function(newvalue , oldvalue){
 	    		if ( newvalue != oldvalue ){
-	    			$(controller.element).addClass('finish-intro');
-	    			$(document).on('mousemove', function(event){
-			    		// var diff = calcDiff( event.pageX, event.pageY );
-			    		TweenMax.to( child , 1, { 
-			    			x: x( event.pageX )*speed , 
-			    			y: y( event.pageY )*speed
-			    		});
-			    	});	
+	    			$('body').addClass('finish-intro');
 	    		}
 	    	} );	    	
 	    },

@@ -3,6 +3,12 @@ header{
 	top: 0;
 	width: 100%;
 	padding: $padding-df 0;
+	.logo{
+		img{
+			filter: grayscale(100%);
+			transition: all 600ms;
+		}
+	}
 	.menu-trigger{
 		float: right;
 		display: inline-block;
@@ -25,6 +31,13 @@ header{
 		}
 		.bottom{
 			transform: translate(0, 18px);
+		}
+	}
+}
+body.finish-intro{
+	header .logo{
+		img{
+			filter: grayscale(0);
 		}
 	}
 }

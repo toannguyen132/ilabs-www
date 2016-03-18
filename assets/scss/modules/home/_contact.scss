@@ -1,0 +1,72 @@
+.contact-form{
+	padding: $padding-wide 0;
+	.row{
+		margin-left: -25px;
+		margin-right: -25px;
+		[class*="col-"]{
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
+	.address-box{
+		padding: 40px;
+		background-color: #fff;
+		@media (min-width: $tablet-min){
+			padding-top: 150px;
+		}
+		.logo{
+			margin: 50px 0 15px 0;
+		}
+		.address{
+			font-weight: 300;
+			font-size: 1.4rem;
+			line-height: 2.1em;
+			p{
+				margin: 0;
+			}
+		}
+	}
+
+	.form{
+		position: relative;
+		.form-row{
+			margin-bottom: $padding-wide;
+			font-weight: 300;
+			font-size: 2.4rem;
+			color: $heading;
+			letter-spacing: 0.5px;
+
+			.wide{
+				width: 400px;
+			}
+
+			input{
+				padding: 5px 10px;
+				background-color: transparent;
+				border-top: 0;
+				border-left: 0;
+				border-right: 0;
+				border-bottom: 1px solid $border-df;
+				outline: none;
+			}
+			select{
+				padding: 5px 10px;
+				appearance: none;
+				border-top: 0;
+				border-left: 0;
+				border-right: 0;
+				border-bottom: 1px solid $border-df;
+				border-radius: 0;
+				outline: none;
+			}
+		}
+		@media (min-width: $tablet-min){
+			padding-top: 150px;
+			.section-heading{
+				position: absolute;
+				top: $padding-wide;
+				left: -100px;
+			}
+		}
+	}
+}

@@ -28,3 +28,13 @@
          url('../fonts/gotham/medium/GothamMedium.ttf') format('truetype'),
          url('../fonts/gotham/medium/GothamMedium.svg#GothamMedium') format('svg');
 }
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/bebas/BebasNeueBold.eot');
+    src: url('../fonts/bebas/BebasNeueBold.eot') format('embedded-opentype'),
+         url('../fonts/bebas/BebasNeueBold.woff2') format('woff2'),
+         url('../fonts/bebas/BebasNeueBold.woff') format('woff'),
+         url('../fonts/bebas/BebasNeueBold.ttf') format('truetype'),
+         url('../fonts/bebas/BebasNeueBold.svg#BebasNeueBold') format('svg');
+}

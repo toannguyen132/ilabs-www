@@ -1,4 +1,40 @@
 .culture{
 	padding: $padding-wide 0;
-		
+	position: relative;
+	
+	.content-box{
+		position: relative;
+		padding: 50px $padding-wide;
+		background-color: #fff;
+		font-size: 1.6rem;
+		line-height: 1.9em;
+		color: #626262;
+	}
+
+	.culture-image{
+
+	}
+
+	@media (min-width: $desktop-min){
+		margin-bottom: 120px;
+		.content-box{
+			width: 635px;
+			position: absolute;
+			top: 212px;
+			left: 46%;
+			transform: translate(-50%);
+			padding: 100px 100px 100px $padding-wide;
+			h2{
+				display: block;
+				position: absolute;
+				top: -52px;
+			}
+			z-index: 1;
+		}
+		.culture-image{
+			position: relative;
+			z-index: 10;
+			float: right;
+		}
+	}
 }

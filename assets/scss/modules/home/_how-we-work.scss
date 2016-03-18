@@ -1,0 +1,68 @@
+.how-we-work{
+	.heading{
+		padding: $padding-wide;
+		background-color: #fff;
+		@media (min-width: $tablet-min){
+			float: right;
+		}
+	}
+
+	.working-list{
+		position: relative;
+		.work-item{
+			position: relative;
+			padding: 118px 15px 15px 37px;
+			display: inline-block;
+			span{
+				font-weight: 700;
+				font-size: 200px;
+				line-height: 1em;
+				color: $heading;
+				position: absolute;
+				z-index: 1;
+				font-family: $bebas;
+				&.behide{
+					z-index: 0;
+				}
+				&.one{
+					top: 0;
+					left: 0px;
+				}
+				&.two{
+					top: 0;
+					left: 72px;
+				}
+			}
+			.box{
+				position: relative;
+				background-color: #fff;
+				padding: $padding-df 30px $padding-df 115px;
+				font-weight: 300;
+				font-size: 24px;
+				color: $heading;
+				letter-spacing: 0.85px;
+			}
+
+			@media (min-width: $tablet-min){
+				position: absolute;
+				$top: 200px;
+				&.one{ }
+				&.two{
+					top: $top;
+					left: 33.33%;
+				}
+				&.three{
+					top: $top * 2;
+					left: 66.67%;
+				}
+			}
+		}
+		@media (min-width: $tablet-min){
+			height: 680px;
+
+			&.two{
+				margin-top: -200px;
+			}
+		}
+	}
+}

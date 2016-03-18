@@ -3,10 +3,16 @@ $padding-df: 15px;
 $padding-wide: 30px;
 /** font **/
 $gotham: "Gotham", sans-serif;
+$bebas: "Bebas", sans-serif;
+/**responsive**/
+$mobile-max: $screen-xs-max;
+$tablet-min: $screen-sm-min;
+$tablet-max: $screen-sm-max;
+$desktop-min: $screen-md-min;
 /**color **/
 $gray: #626262;
 $dark-gray: #2C3E50;
-
 $page-bg: #F8F9FA;
 $heading: $dark-gray;
-$body: $gray
+$body: $gray;
+$border-df: #BBC0C7;

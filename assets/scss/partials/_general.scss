@@ -2,12 +2,16 @@ html{
 	font-size: 10px;
 }
 body{
-	font-size: 1.4rem;
-	line-height: 1.4em;
+	font-size: 1.6rem;
+	line-height: 1.5em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-family: $gotham;
 	background-color: $page-bg;
+	color: $gray;
+}
+strong{
+	color: $heading;
 }
 [ng-click], a{
 	cursor: pointer;

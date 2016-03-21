@@ -20,6 +20,12 @@
 	100% { transform: translateX(0px); }
 }
 
+@keyframes hero-object{
+	0% { transform: translate(3000px, -1000px) scale(0.5); }
+	50% { transform: translateX(-3000px) scale(0.8); }
+	100% { transform: translateX(0px); }
+}
+
 .animate-fade{
 	opacity: 0;
 	visibility: hidden;
@@ -47,6 +53,19 @@
 	animation-play-state: paused;
 	animation-fill-mode: forwards;
 	transform: translateX(-1000px);
+	&.showup{
+		animation-play-state: running;
+	}
+}
+
+
+.animation-hero-object{
+	animation-name: hero-object;
+	animation-duration: 3000ms;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	transform: translate(3000px, -1000px);
 
 	&.showup{
 		animation-play-state: running;

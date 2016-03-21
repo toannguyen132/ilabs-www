@@ -42,23 +42,20 @@ angular.module('demo', ['zumba.angular-waypoints'])
 	    		.range([1,-1]);
 
 	    	// parralax
-	    	$(document).on('mousemove', function(event){
-	    		TweenMax.to( child, 0.5, {
-	    			x: x( event.pageX )*speed,
-	    			y: y( event.pageY )*speed,
-	    			force3D:false
-	    		});
+	    	setTimeout( function(){
+	    		$(document).on('mousemove', function(event){
+		    		TweenMax.to( child, 0.5, {
+		    			x: x( event.pageX )*speed,
+		    			y: y( event.pageY )*speed,
+		    			force3D:false
+		    		});
 
-	    		backdrop.css({
-	    			// transform: 'rotateY('+ (-x( event.pageX )*5) + 'deg) scale(0.8)'
-	    			transform: 'rotateY('+ (-x( event.pageX )*1) + 'deg) rotateX(' + (y( event.pageY )*1) +'deg) scale(0.8)'
-	    		});
-	    		// TweenMax.to( backdrop, 0.5, {
-	    		// 	rotationX: -x( event.pageX )*8,
-	    		// 	rotationY: y( event.pageY )*8,
-	    		// 	force3D:false
-	    		// } )
-	    	});	
+		    		backdrop.css({
+		    			// transform: 'rotateY('+ (-x( event.pageX )*5) + 'deg) scale(0.8)'
+		    			transform: 'rotateY('+ (-x( event.pageX )*1) + 'deg) rotateX(' + (y( event.pageY )*1) +'deg) scale(0.8)'
+		    		});
+		    	});	
+	    	}, 3100 );
 
 	    	// console.log(controller);
 	    	scope.$watch( function(){ return controller.triggered }, function(newvalue , oldvalue){

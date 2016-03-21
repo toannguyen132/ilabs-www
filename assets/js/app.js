@@ -2,9 +2,10 @@ var angular = require('angular');
 var $ = require('jquery');
 var TweenMax = require('tweenmax');
 var d3 = require('d3');
+require('angular-waypoints');
 // more code here
 
-angular.module('demo', [])
+angular.module('demo', ['zumba.angular-waypoints'])
 .directive('documentParralax', function($timeout){
 	return {
 		restrict: 'A',
@@ -31,6 +32,7 @@ angular.module('demo', [])
 	    	var speed = attrs.speed;
 	    	var parent = controller.element;
 	    	var child = element.find('.object-inner');
+	    	var backdrop = $('.object-parallax > .backdrop');
 	    	var x = d3.scale.linear()
 	    		.domain([0, $(parent).width()])
 	    		.range([1,-1]);
@@ -40,16 +42,21 @@ angular.module('demo', [])
 
 	    	// parralax
 	    	$(document).on('mousemove', function(event){
-	    		// var diff = calcDiff( event.pageX, event.pageY );
-	    		// TweenMax.to( child ,0.1, { attr: {
-	    		// 		style: "transform: translate(" + x( event.pageX )*speed + "px, " + y( event.pageY )*speed + "px)"
-	    		// 	}
-	    		// });
 	    		TweenMax.to( child, 0.5, {
 	    			x: x( event.pageX )*speed,
 	    			y: y( event.pageY )*speed,
 	    			force3D:false
-	    		})
+	    		});
+
+	    		backdrop.css({
+	    			// transform: 'rotateY('+ (-x( event.pageX )*5) + 'deg) scale(0.8)'
+	    			transform: 'rotateY('+ (-x( event.pageX )*1) + 'deg) rotateX(' + (y( event.pageY )*1) +'deg) scale(0.8)'
+	    		});
+	    		// TweenMax.to( backdrop, 0.5, {
+	    		// 	rotationX: -x( event.pageX )*8,
+	    		// 	rotationY: y( event.pageY )*8,
+	    		// 	force3D:false
+	    		// } )
 	    	});	
 
 	    	// console.log(controller);

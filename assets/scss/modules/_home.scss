@@ -17,6 +17,8 @@
 }
 
 .object-parallax{
+	// transform-style: preserve-3d;
+	perspective: 1600px;
 	.backdrop{
 		position: absolute;
 		top: 0;
@@ -45,7 +47,7 @@
 	  	transform: translate3d(0,0,0);
 	}
 	&.active .clip-path{
-		$amount: 140%;
+		$amount: 500%;
 		/* new function syntax for webkit browsers */
 		// shape-inside: circle($amount at $x $y);
 		clip-path: circle($amount at $x $y);

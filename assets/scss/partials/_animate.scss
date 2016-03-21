@@ -1,0 +1,54 @@
+[class*="animate-"]{
+	transition-property: all;
+	transition-duration: 600ms;
+}
+
+// $time: 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300;
+@for $i from 1 to 14{
+	$delay: $i * 100;
+	.delay#{$delay}{
+		transition-delay: #{$delay}ms;
+	}
+	.animation-delay#{$delay}{
+		animation-delay: #{$delay}ms;
+	}
+}
+
+@keyframes bounce{
+	0% { transform: translateX(-1000px); }
+	80% { transform: translateX(20px); }
+	100% { transform: translateX(0px); }
+}
+
+.animate-fade{
+	opacity: 0;
+	visibility: hidden;
+	&.showup{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.animate-bottom-up{
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(20px);
+	&.showup{
+		transform: translateY(0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.animation-edge-left{
+	display: inline-block;
+	animation-name: bounce;
+	animation-duration: 600ms;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	transform: translateX(-1000px);
+
+	&.showup{
+		animation-play-state: running;
+	}
+}

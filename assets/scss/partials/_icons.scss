@@ -24,3 +24,20 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-android:before {
+    content: "\e902";
+}
+.icon-apple:before {
+    content: "\e903";
+}
+.icon-mobile:before {
+    content: "\e904";
+}
+.icon-arrow-left:before {
+    content: "\e900";
+}
+.icon-arrow-right:before {
+    content: "\e901";
+}
+

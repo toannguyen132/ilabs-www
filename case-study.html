@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Ilabs www</title>
+	<meta name="charset" content="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="public/css/bootstrap.css">
+	<link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+	<header zum-waypoint="wp" down="header.down">
+		<div class="container">
+			<div class="menu-trigger animate-bottom-up delay1000" ng-class="{ showup: wp.header.down }">
+				<a href="#" class="hamburger">
+					<div class="bar top"></div>
+					<div class="bar bottom"></div>
+				</a>
+			</div>
+			<div class="logo animate-bottom-up delay1000" ng-class="{ showup: wp.header.down }">
+				<img src="public/img/logo.svg" alt="Interactive Labs">
+			</div>	
+		</div>
+	</header>	
+
+	<div class="case-switcher-container">
+		<div class="case-switcher">
+			<a class="prev" href=""><span class="icon-arrow-left"></span></a>
+			<div class="center">
+				<img src="public/img/clients/dictionary-logo.png" srcset="public/img/clients/dictionary-logo@2x.png 2x" alt="Dititionary Logo">
+			</div>
+			<a class="next" href=""><span class="icon-arrow-right"></span></a>
+		</div>
+	</div>
+
+	<div class="case-hero case-hero-dictionary">
+		<div class="container">
+			<div class="backdrop"></div>
+			<div class="hero-content">
+				<div class="thumb">
+					<div class="photo">
+						<img src="public/img/photo/dictionary-hero-thumb.png" srcset="public/img/photo/dictionary-hero-thumb@2x.png 2x" alt="">
+					</div>
+					<a class="more" href="#">Click to view more</a>
+				</div>
+				<div class="info">
+					<div class="info-inner">
+						<h2 class="heading">Re-thinking the 100M+ app downloads</h2>
+						<div class="tags">
+							<span class="tag-badge">UX Design</span>
+							<span class="tag-badge">UI Design</span>
+							<span class="tag-badge">Cross-Platform Application</span>
+							<span class="tag-badge">Increasing Conversion</span>
+						</div>
+						<div class="desc">
+							Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa. Cray paleo tattooed, Truffaut skateboard street art PBR jean shorts Shoreditch farm-to-table. 
+						</div>
+						<div class="icons">
+							<span class="icon-item ci-apple">
+								<span class="icon-apple"></span>
+							</span>
+							<span class="icon-item ci-android">
+								<span class="icon-android"></span>
+							</span>
+							<span class="icon-item  ci-mobile">
+								<span class="icon-mobile"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-case-posts case-first-post">
+		<div class="container">
+			<div class="post-reg narrow">
+				<h1 class="title">What is the challenge?</h1>
+				<div class="thumb">
+					<img src="public/img/photo/case-photo.png" srcset="public/img/photo/case-photo@2x.png 2x" alt="">
+				</div>
+				<div class="desc"><p>The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</p></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-white case-point">
+		<div class="container">
+			<div class="point-num">
+				1
+			</div>
+			<div class="introduce">
+				<h2 class="title">Mapping the flow</h2>
+				<p class="desc">It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends.</p>
+			</div>
+			<div class="main-content">
+				<img src="public/img/photo/case-map-flow.png" srcset="public/img/photo/case-map-flow@2x.png 2x" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="section contact-form">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="address-box">
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
+					
+						<div class="logo">
+							<img src="public/img/logo.svg" alt="logo">
+						</div>
+						<div class="address">
+							<p>Copyright &copy; 2015 interactivelabs.co</p>
+							<p>Address: <strong>33 Iron Horse Ln, Walnut Creek CA, 94597</strong></p>
+							<p>Phone: <strong>415 322-8169</strong></p>
+						</div>
+						<div class="icons">
+							<span class="circle-icon social-apple">
+								<span class="icon-apple"></span>
+							</span>
+							<span class="circle-icon social-android">
+								<span class="icon-android"></span>
+							</span>
+							<span class="circle-icon social-mobile">
+								<span class="icon-mobile"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="form">
+						<h2 class="section-heading">Say <br>Hello!</h2>
+						<form action="">
+							<div class="form-row">
+								My name is <input type="text">
+							</div>
+							<div class="form-row">
+								My email address <input type="email" class="wide" name="">
+							</div>
+							<div class="form-row">
+								and phone number <input type="phone" name="">
+							</div>
+							<div class="form-row">
+								i want to work with ilabs on 
+								<select name="#" id="">
+									<option value="">Application</option>
+									<option value="">UX Testing</option>
+									<option value="">UI Design</option>
+								</select> project
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
+	<script src="public/js/bundle.js"></script>
+</body>
+</html>

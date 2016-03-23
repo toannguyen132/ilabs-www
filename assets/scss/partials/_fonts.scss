@@ -31,10 +31,22 @@
 
 @font-face {
     font-family: 'Bebas';
-    src: url('../fonts/bebas/BebasNeueBold.eot');
-    src: url('../fonts/bebas/BebasNeueBold.eot') format('embedded-opentype'),
-         url('../fonts/bebas/BebasNeueBold.woff2') format('woff2'),
-         url('../fonts/bebas/BebasNeueBold.woff') format('woff'),
-         url('../fonts/bebas/BebasNeueBold.ttf') format('truetype'),
-         url('../fonts/bebas/BebasNeueBold.svg#BebasNeueBold') format('svg');
+    font-weight: 700;
+    src: url('../fonts/bebas/bold/BebasNeueBold.eot');
+    src: url('../fonts/bebas/bold/BebasNeueBold.eot') format('embedded-opentype'),
+         url('../fonts/bebas/bold/BebasNeueBold.woff2') format('woff2'),
+         url('../fonts/bebas/bold/BebasNeueBold.woff') format('woff'),
+         url('../fonts/bebas/bold/BebasNeueBold.ttf') format('truetype'),
+         url('../fonts/bebas/bold/BebasNeueBold.svg#BebasNeueBold') format('svg');
+}
+
+@font-face {
+    font-family: 'Bebas';
+    font-weight: 400;
+    src: url('../fonts/bebas/regular/BebasNeueRegular.eot');
+    src: url('../fonts/bebas/regular/BebasNeueRegular.eot') format('embedded-opentype'),
+         url('../fonts/bebas/regular/BebasNeueRegular.woff2') format('woff2'),
+         url('../fonts/bebas/regular/BebasNeueRegular.woff') format('woff'),
+         url('../fonts/bebas/regular/BebasNeueRegular.ttf') format('truetype'),
+         url('../fonts/bebas/regular/BebasNeueRegular.svg#BebasNeueRegular') format('svg');
 }

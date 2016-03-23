@@ -9,10 +9,20 @@ body{
 	font-family: $gotham;
 	background-color: $page-bg;
 	color: $gray;
+	overflow-x: hidden;
 }
 strong{
 	color: $heading;
 }
 [ng-click], a{
 	cursor: pointer;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+h1, h2, h3, h4{
+	color: $heading;
+	font-weight: 300;
 }

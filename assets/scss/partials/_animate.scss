@@ -16,14 +16,28 @@
 
 @keyframes bounce{
 	0% { transform: translateX(-1000px); }
-	80% { transform: translateX(20px); }
+	70% { transform: translateX(20px); }
 	100% { transform: translateX(0px); }
+}
+
+@keyframes bounce-top-down{
+	0% { transform: translateY(-1000px); }
+	70% { transform: translateY(20px); }
+	100% { transform: translateY(0px); }
 }
 
 @keyframes hero-object{
 	0% { transform: translate(3000px, -1000px) scale(0.5); }
 	50% { transform: translateX(-3000px) scale(0.8); }
 	100% { transform: translateX(0px); }
+}
+
+@keyframes ball-bounce{
+	0% { transform: translateY(0px) }
+	25% { transform: translateY(-20px) }
+	50% { transform: translateY(0px) }
+	75% { transform: translateY(20px) }
+	100% { transform: translateY(0px) }
 }
 
 .animate-fade{
@@ -58,6 +72,38 @@
 	}
 }
 
+.animation-edge-top{
+	display: inline-block;
+	animation-name: bounce-top-down;
+	animation-duration: 800ms;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	transform: translateY(-1000px);
+	&.showup{
+		animation-play-state: running;
+	}
+}
+
+.animation-ball{
+	animation-name: ball-bounce;
+	animation-duration: 1000ms;
+	animation-play-state: paused;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 1000ms;
+	&.showup{
+		animation-play-state: running;
+	}
+	&:hover{
+		animation-play-state: paused;
+		animation-timing-function: linear step-end;
+	}
+}
+body.finish-intro{
+	.animation-ball{
+		animation: none;
+	}
+}
 
 .animation-hero-object{
 	animation-name: hero-object;

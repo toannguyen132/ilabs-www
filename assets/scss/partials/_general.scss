@@ -26,3 +26,37 @@ h1, h2, h3, h4{
 	color: $heading;
 	font-weight: 300;
 }
+
+@mixin aspect-ratio($width, $height){
+	position: relative;
+	&:after{
+		content: "";
+		display: block;
+		padding-top: #{$height / $width * 100}%;
+	}
+	.content{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+.btn{
+	border-radius: 0;
+	padding: 10px 20px;
+	background-color: #fff;
+	&.active{
+		background: #E3E5E6;
+		box-shadow: none;// 0px 5px 20px 0px rgba(0,0,0,0.10);
+	}
+}
+
+.btn-group{
+	display: inline-block;
+	box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.10);
+	.btn{
+		display: inline-block;
+	}
+}

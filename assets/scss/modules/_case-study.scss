@@ -125,6 +125,9 @@
 }
 
 /** post **/
+.case-first-post{
+	padding: 100px 0;
+}
 .post-reg{
 	padding: $padding-wide 0;
 	@media (min-width: $desktop-min){
@@ -155,10 +158,11 @@
 
 .section-white{
 	background-color: #fff;
-	padding: 50px 0;
+	// padding: 50px 0;
 }
 
 .case-point{
+	padding: 50px 0;
 	> .container{
 		position: relative;
 	}
@@ -196,6 +200,7 @@
 		max-width: 750px;
 		margin: 0 auto;
 		font-size: 1.8rem;
+		margin-bottom: 50px;
 		.title{
 			font-size: 48px;
 			color: #2C3E50;
@@ -207,6 +212,101 @@
 	.main-content{
 		img{
 			max-width: 100%;
+		}
+	}
+}
+
+.case-visual{
+
+}
+
+.case-study-visual-screens{
+	text-align: center;
+	.screen-container{
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+		@media (min-width: $tablet-min){
+			margin-left: $padding-wide;
+			margin-right: $padding-wide;
+			display: inline-block;
+		}
+		.screen{
+			width: 414px;
+			height: 738px;
+			margin-bottom: 50px;
+			background: #FFFFFF;
+			box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.10);
+		}
+		.label{
+			line-height: 40px;
+		}
+	}
+}
+
+.section-sample{
+	padding-bottom: 150px;
+}
+
+.case-response{
+	position: relative;
+	@media (min-width: $desktop-min){
+		height: 1100px;	
+		.container{
+			height: 100%;
+		}
+	}
+	.overlay-bg{
+		@include aspect-ratio( 1459, 979 );
+		position: absolute;
+		top: -130px;
+		left: 50%;
+		transform: translateX(-50%);
+		.bg{
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 100%;
+		}
+		@media (min-width: $desktop-min){
+			width: 1459px;
+		}
+	}
+
+	.the-response{
+		@media (min-width: $desktop-min){
+			position: absolute;
+			width: 45%;
+			right: $padding-df;
+			bottom: 50px;
+		}
+		.title{
+			font-size: 4.8rem;
+			letter-spacing: 0.66px;
+			margin-bottom: $padding-wide;
+		}
+		.quote{
+			font-style: italic;
+			font-size: 1.8rem;
+			margin-bottom: $padding-wide;
+		}
+
+		.author{
+			.thumb{
+				float: left;
+				width: 70px;
+				height: 70px;
+				margin-right: $padding-df;
+				img{
+					border-radius: 35px;
+				}
+			}
+			.name{
+				padding-top: 10px;
+				display: block;
+			}
+			span{
+				display: block;
+			}
 		}
 	}
 }

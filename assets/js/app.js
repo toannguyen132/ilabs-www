@@ -69,4 +69,77 @@ angular.module('demo', ['zumba.angular-waypoints'])
 	    	// console.log($scope);
 	    }
 	}
+})
+.factory('csData', function(){
+	var data = {
+		current: 0,
+		total: 0
+	};
+
+	return{
+		getCurrent: function(){
+			return data.current;
+		},
+		setCurrent: function(current){
+			data.current = current;
+		},
+		setTotal: function(total){
+			data.total = total;
+		},
+		getTotal: function(){
+			return data.total;
+		},
+		next: function(){
+			data.current++;
+			if ( data.current >= data.total )
+				data.current = data.total;
+		},
+		prev: function(){
+			data.current--;
+			if ( data.current < 0 )
+				data.current = 0;
+		}
+	}
+})
+.controller('caseStudySlideNav', function($scope, csData){
+	var total = csData.getTotal();
+	$scope.current = csData.getCurrent();
+	$scope.$watch('current', function(newValue, oldValue){
+		if (newValue !== oldValue){
+			csData.setCurrent(newValue);
+		}
+		$scope.canPrev = { disabled: $scope.current == 0 };
+		$scope.canNext = { disabled: $scope.current >= total - 1 };
+	});
+	$scope.$watch(function(){ return csData.getTotal; }, function(newValue){
+		total = csData.getTotal();
+		$scope.canNext = { disabled: $scope.current >= total - 1 };
+	});
+
+	$scope.next = function(){
+		if ( $scope.current < total - 1 ){
+			$scope.current++;
+		}
+	}
+	$scope.prev = function(){
+		if ( $scope.current > 0 ){
+			$scope.current--;
+		}
+	}
+})
+.controller('caseStudySlide', function($scope, csData){
+	csData.setTotal(2);
+	$scope.current = csData.getCurrent();
+	$scope.total = 2;
+	$scope.$watch( 'current', function(newValue, oldValue){
+		$scope.transform = $scope.current * (100/$scope.total);
+		$scope.slideStyle = { 
+			"transform": "translateX(-" + $scope.transform + "%)"
+		};	
+	} );
+	$scope.$watch(function(){
+		return csData.getCurrent();
+	}, function(newValue, oldvalue){
+		$scope.current = newValue;
+	});
 });

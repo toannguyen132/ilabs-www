@@ -11,6 +11,9 @@
 	}
 	a{
 		color: $heading;
+		&.disabled{
+			opacity: 0.5;
+		}
 	}
 	padding: $padding-df 0;
 	line-height: 35px;
@@ -309,4 +312,18 @@
 			}
 		}
 	}
+}
+
+/** slider **/
+.case-study-sliders{
+	width: 100vw;
+	overflow: hidden;
+}
+.case-studies-wrapper{
+	width: 200%;
+	transition: all 600ms;
+}
+.case-study-item{
+	width: 50%;
+	float: left;
 }

@@ -22,144 +22,285 @@
 		</div>
 	</header>	
 
-	<div class="case-switcher-container">
+	<div class="case-switcher-container" ng-controller="caseStudySlideNav">
 		<div class="case-switcher">
-			<a class="prev" href=""><span class="icon-arrow-left"></span></a>
+			<a class="prev" ng-class="canPrev" ng-click="prev()"><span class="icon-arrow-left"></span></a>
 			<div class="center">
 				<img src="public/img/clients/dictionary-logo.png" srcset="public/img/clients/dictionary-logo@2x.png 2x" alt="Dititionary Logo">
 			</div>
-			<a class="next" href=""><span class="icon-arrow-right"></span></a>
+			<a class="next" ng-class="canNext" ng-click="next()"><span class="icon-arrow-right"></span></a>
 		</div>
 	</div>
 
-	<div class="case-hero case-hero-dictionary">
-		<div class="container">
-			<div class="backdrop"></div>
-			<div class="hero-content">
-				<div class="thumb">
-					<div class="photo">
-						<img src="public/img/photo/dictionary-hero-thumb.png" srcset="public/img/photo/dictionary-hero-thumb@2x.png 2x" alt="">
-					</div>
-					<a class="more" href="#">Click to view more</a>
-				</div>
-				<div class="info">
-					<div class="info-inner">
-						<h2 class="heading">Re-thinking the 100M+ app downloads</h2>
-						<div class="tags">
-							<span class="tag-badge">UX Design</span>
-							<span class="tag-badge">UI Design</span>
-							<span class="tag-badge">Cross-Platform Application</span>
-							<span class="tag-badge">Increasing Conversion</span>
-						</div>
-						<div class="desc">
-							Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa. Cray paleo tattooed, Truffaut skateboard street art PBR jean shorts Shoreditch farm-to-table. 
-						</div>
-						<div class="icons">
-							<span class="icon-item ci-apple">
-								<span class="icon-apple"></span>
-							</span>
-							<span class="icon-item ci-android">
-								<span class="icon-android"></span>
-							</span>
-							<span class="icon-item  ci-mobile">
-								<span class="icon-mobile"></span>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="section section-case-posts case-first-post">
-		<div class="container">
-			<div class="post-reg narrow">
-				<h1 class="title">What is the challenge?</h1>
-				<div class="thumb">
-					<img src="public/img/photo/case-photo.png" srcset="public/img/photo/case-photo@2x.png 2x" alt="">
-				</div>
-				<div class="desc"><p>The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</p></div>
-			</div>
-		</div>
-	</div>
-
-	<div class="section section-white case-point">
-		<div class="container">
-			<div class="point-num">1</div>
-			<div class="introduce">
-				<h2 class="title">Mapping the flow</h2>
-				<p class="desc">It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends.</p>
-			</div>
-			<div class="main-content">
-				<img src="public/img/photo/case-map-flow.png" srcset="public/img/photo/case-map-flow@2x.png 2x" alt="">
-			</div>
-		</div>
-	</div>
-
-	<div class="section case-point case-visual">
-		<div class="container">
-			<div class="point-num">2</div>
-			<div class="introduce">
-				<h2 class="title">Visual journey</h2>
-				<p class="desc">I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night.</p>
-			</div>
-			<div class="main-content">
-				<div class="case-study-visual-screens"><div class="screen-container-1 screen-container">
-						<div class="screen"></div>
-						<div class="label">
-							<span>Original</span>
+	<div class="case-study-sliders" ng-controller="caseStudySlide">
+		<div class="case-studies-wrapper" ng-style="slideStyle">
+			<div class="case-study-item">
+				<div class="case-hero case-hero-dictionary">
+					<div class="container">
+						<div class="backdrop"></div>
+						<div class="hero-content">
+							<div class="thumb">
+								<div class="photo">
+									<img src="public/img/photo/dictionary-hero-thumb.png" srcset="public/img/photo/dictionary-hero-thumb@2x.png 2x" alt="">
+								</div>
+								<a class="more" href="#">Click to view more</a>
+							</div>
+							<div class="info">
+								<div class="info-inner">
+									<h2 class="heading">Re-thinking the 100M+ app downloads</h2>
+									<div class="tags">
+										<span class="tag-badge">UX Design</span>
+										<span class="tag-badge">UI Design</span>
+										<span class="tag-badge">Cross-Platform Application</span>
+										<span class="tag-badge">Increasing Conversion</span>
+									</div>
+									<div class="desc">
+										Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa. Cray paleo tattooed, Truffaut skateboard street art PBR jean shorts Shoreditch farm-to-table. 
+									</div>
+									<div class="icons">
+										<span class="icon-item ci-apple">
+											<span class="icon-apple"></span>
+										</span>
+										<span class="icon-item ci-android">
+											<span class="icon-android"></span>
+										</span>
+										<span class="icon-item  ci-mobile">
+											<span class="icon-mobile"></span>
+										</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="screen-container-2 screen-container">
-						<div class="screen"></div>
-						<div class="label">
-							<div class="btn-group">
-								<button class="btn">IOS</button><button class="active btn">Android</button>
+				</div>
+			
+				<div class="section section-case-posts case-first-post">
+					<div class="container">
+						<div class="post-reg narrow">
+							<h1 class="title">What is the challenge?</h1>
+							<div class="thumb">
+								<img src="public/img/photo/case-photo.png" srcset="public/img/photo/case-photo@2x.png 2x" alt="">
+							</div>
+							<div class="desc"><p>The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</p></div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="section section-white case-point">
+					<div class="container">
+						<div class="point-num">1</div>
+						<div class="introduce">
+							<h2 class="title">Mapping the flow</h2>
+							<p class="desc">It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends.</p>
+						</div>
+						<div class="main-content">
+							<img src="public/img/photo/case-map-flow.png" srcset="public/img/photo/case-map-flow@2x.png 2x" alt="">
+						</div>
+					</div>
+				</div>
+			
+				<div class="section case-point case-visual">
+					<div class="container">
+						<div class="point-num">2</div>
+						<div class="introduce">
+							<h2 class="title">Visual journey</h2>
+							<p class="desc">I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night.</p>
+						</div>
+						<div class="main-content">
+							<div class="case-study-visual-screens"><div class="screen-container-1 screen-container">
+									<div class="screen"></div>
+									<div class="label">
+										<span>Original</span>
+									</div>
+								</div>
+								<div class="screen-container-2 screen-container">
+									<div class="screen"></div>
+									<div class="label">
+										<div class="btn-group">
+											<button class="btn">IOS</button><button class="active btn">Android</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="section section-white case-point section-sample">
+					<div class="container">
+						<div class="point-num">3</div>
+						<div class="introduce">
+							<h2 class="title">Some friendly animation</h2>
+							<p class="desc">I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to.</p>
+						</div>
+						<div class="main-content">
+							<div class="row">
+								<div class="col-sm-6">
+									<a href="#"><img src="public/img/photo/case-sample-1.png" srcset="public/img/photo/case-sample-1@2x.png 2x" alt=""></a>
+								</div>
+								<div class="col-sm-6">
+									<a href="#"><img src="public/img/photo/case-sample-2.png" srcset="public/img/photo/case-sample-2@2x.png 2x" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="section case-point case-response">
+					<div class="container">
+						<div class="point-num">4</div>
+						<div class="main-content">
+							<div class="overlay-bg">
+								<div class="content bg" style="background-image: url(public/img/photo/case-iphone@2x.png)">
+								</div>
+							</div>
+							<div class="the-response">
+								<h2 class="title">The Response</h2>
+								<div class="quote">"In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one place; for at one and the same time everything has to be done everywhere."</div>
+								<div class="author">
+									<div class="thumb">
+										<img src="public/img/photo/case-testimonial-avatar.png" srcset="public/img/photo/case-testimonial-avatar@2x.png 2x" alt="">
+									</div>
+									<strong class="name">Kyle Andrews</strong>
+									<span>Product Manager at D.com</span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<div class="section section-white case-point section-sample">
-		<div class="container">
-			<div class="point-num">3</div>
-			<div class="introduce">
-				<h2 class="title">Some friendly animation</h2>
-				<p class="desc">I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to.</p>
-			</div>
-			<div class="main-content">
-				<div class="row">
-					<div class="col-sm-6">
-						<a href="#"><img src="public/img/photo/case-sample-1.png" srcset="public/img/photo/case-sample-1@2x.png 2x" alt=""></a>
-					</div>
-					<div class="col-sm-6">
-						<a href="#"><img src="public/img/photo/case-sample-2.png" srcset="public/img/photo/case-sample-2@2x.png 2x" alt=""></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="section case-point case-response">
-		<div class="container">
-			<div class="point-num">4</div>
-			<div class="main-content">
-				<div class="overlay-bg">
-					<div class="content bg" style="background-image: url(public/img/photo/case-iphone@2x.png)">
-					</div>
-				</div>
-				<div class="the-response">
-					<h2 class="title">The Response</h2>
-					<div class="quote">"In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one place; for at one and the same time everything has to be done everywhere."</div>
-					<div class="author">
-						<div class="thumb">
-							<img src="public/img/photo/case-testimonial-avatar.png" srcset="public/img/photo/case-testimonial-avatar@2x.png 2x" alt="">
+			<div class="case-study-item">
+				<div class="case-hero case-hero-dictionary">
+					<div class="container">
+						<div class="backdrop"></div>
+						<div class="hero-content">
+							<div class="thumb">
+								<div class="photo">
+									<img src="public/img/photo/dictionary-hero-thumb.png" srcset="public/img/photo/dictionary-hero-thumb@2x.png 2x" alt="">
+								</div>
+								<a class="more" href="#">Click to view more</a>
+							</div>
+							<div class="info">
+								<div class="info-inner">
+									<h2 class="heading">Re-thinking the 100M+ app downloads</h2>
+									<div class="tags">
+										<span class="tag-badge">UX Design</span>
+										<span class="tag-badge">UI Design</span>
+										<span class="tag-badge">Cross-Platform Application</span>
+										<span class="tag-badge">Increasing Conversion</span>
+									</div>
+									<div class="desc">
+										Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa. Cray paleo tattooed, Truffaut skateboard street art PBR jean shorts Shoreditch farm-to-table. 
+									</div>
+									<div class="icons">
+										<span class="icon-item ci-apple">
+											<span class="icon-apple"></span>
+										</span>
+										<span class="icon-item ci-android">
+											<span class="icon-android"></span>
+										</span>
+										<span class="icon-item  ci-mobile">
+											<span class="icon-mobile"></span>
+										</span>
+									</div>
+								</div>
+							</div>
 						</div>
-						<strong class="name">Kyle Andrews</strong>
-						<span>Product Manager at D.com</span>
+					</div>
+				</div>
+			
+				<div class="section section-case-posts case-first-post">
+					<div class="container">
+						<div class="post-reg narrow">
+							<h1 class="title">What is the challenge?</h1>
+							<div class="thumb">
+								<img src="public/img/photo/case-photo.png" srcset="public/img/photo/case-photo@2x.png 2x" alt="">
+							</div>
+							<div class="desc"><p>The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</p></div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="section section-white case-point">
+					<div class="container">
+						<div class="point-num">1</div>
+						<div class="introduce">
+							<h2 class="title">Mapping the flow</h2>
+							<p class="desc">It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends.</p>
+						</div>
+						<div class="main-content">
+							<img src="public/img/photo/case-map-flow.png" srcset="public/img/photo/case-map-flow@2x.png 2x" alt="">
+						</div>
+					</div>
+				</div>
+			
+				<div class="section case-point case-visual">
+					<div class="container">
+						<div class="point-num">2</div>
+						<div class="introduce">
+							<h2 class="title">Visual journey</h2>
+							<p class="desc">I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night.</p>
+						</div>
+						<div class="main-content">
+							<div class="case-study-visual-screens"><div class="screen-container-1 screen-container">
+									<div class="screen"></div>
+									<div class="label">
+										<span>Original</span>
+									</div>
+								</div>
+								<div class="screen-container-2 screen-container">
+									<div class="screen"></div>
+									<div class="label">
+										<div class="btn-group">
+											<button class="btn">IOS</button><button class="active btn">Android</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="section section-white case-point section-sample">
+					<div class="container">
+						<div class="point-num">3</div>
+						<div class="introduce">
+							<h2 class="title">Some friendly animation</h2>
+							<p class="desc">I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to.</p>
+						</div>
+						<div class="main-content">
+							<div class="row">
+								<div class="col-sm-6">
+									<a href="#"><img src="public/img/photo/case-sample-1.png" srcset="public/img/photo/case-sample-1@2x.png 2x" alt=""></a>
+								</div>
+								<div class="col-sm-6">
+									<a href="#"><img src="public/img/photo/case-sample-2.png" srcset="public/img/photo/case-sample-2@2x.png 2x" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="section case-point case-response">
+					<div class="container">
+						<div class="point-num">4</div>
+						<div class="main-content">
+							<div class="overlay-bg">
+								<div class="content bg" style="background-image: url(public/img/photo/case-iphone@2x.png)">
+								</div>
+							</div>
+							<div class="the-response">
+								<h2 class="title">The Response</h2>
+								<div class="quote">"In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one place; for at one and the same time everything has to be done everywhere."</div>
+								<div class="author">
+									<div class="thumb">
+										<img src="public/img/photo/case-testimonial-avatar.png" srcset="public/img/photo/case-testimonial-avatar@2x.png 2x" alt="">
+									</div>
+									<strong class="name">Kyle Andrews</strong>
+									<span>Product Manager at D.com</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

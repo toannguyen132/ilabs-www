@@ -1,0 +1,180 @@
+.about-intro{
+	background-image: url("../img/about-intro@2x.png");
+	background-size: contain;
+	background-position: 30px center;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+
+	@media (min-width: $tablet-min){
+		margin-top: 30px;
+		.container{
+			height: 893px;	
+		}
+	}
+	.intro-content{
+		@media (min-width: $tablet-min){
+			position: absolute;
+			right: 0;
+			top: 40%;
+			width: 415px;
+		}
+		h2{
+			margin-bottom: $padding-df;
+		}
+	}
+}
+
+.about-services{
+	position: relative;
+	padding: 220px 0 100px 0;
+	@media (min-width: $tablet-min){
+		margin-top: -220px;
+	}
+
+	.heading{
+		font-weight: 400;
+		font-size: 2rem;
+		letter-spacing: 0.5px;
+		margin: 0 0 60px 0;
+	}
+
+	.services-list{
+		text-align: justify;
+		&:after{
+			content: "";
+			display: inline-block;
+			width: 100%;
+			height: 1px;
+		}
+		.service{
+			display: inline-block;
+			margin-bottom: $padding-wide;
+			vertical-align: top;
+			// width: 33%;
+			.icon{
+				width: 100px;
+				height: 65px;
+				display: inline-block;
+				text-align: left;
+			}
+			.desc{
+				text-align: left;
+				display: inline-block;
+				font-weight: 600;
+				font-size: 1.8rem;
+				color: $heading;
+				letter-spacing: 0.64px;
+				line-height: 65px;
+				width: 150px;
+				vertical-align: top;
+				span{
+					line-height: 1.2em;
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
+		.line-break{
+			display: inline-block;
+			width: 100%;
+			height: 1px;
+		}
+	}
+}
+
+.about-team{
+	padding: 50px 0;
+	.heading{
+		text-align: center;
+		font-size: 2rem;
+		letter-spacing: 0.5px;
+		margin-bottom: 50px;
+	}
+
+	.members-list{
+		.member-col:nth-child(2n){
+			padding-top: $padding-wide;
+		}
+	}
+
+	.member-card{
+		position: relative;
+		margin-bottom: $padding-wide;
+		.bg{
+			position: relative;
+			@include aspect-ratio(260, 370);
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			.middle{
+				position: absolute;
+				top: 50%;
+				height: 40px;
+				width: 100%;
+				margin-top: -20px;
+				text-align: center;
+				.btn{
+					color: #fff;
+					display: inline-block;
+					height: 40px;
+					border: 2px solid #fff;
+					background-color: transparent;
+					font-weight: 600;
+					font-size: 1.8rem;
+					letter-spacing: 0.64px;
+					line-height: 1em;
+					transition: all 300ms;
+					&:hover{
+						background-color: #fff;
+						color: #000;
+					}
+				}
+			}
+		}
+		.overlay{
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: $padding-wide $padding-df;
+			color: #fff;
+			text-align: center;
+			z-index: 1;
+			transition: all 300ms;
+			.overlay-bg{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #000;
+				opacity: 0.6;
+				z-index: -1;
+			}
+			.name{
+				color: #fff;
+				font-weight: 600;
+				letter-spacing: 0.57px;
+				font-size: 1.6rem;
+				line-height: 1.2em;
+				margin: 0;
+			}
+			.title{
+				color: #fff;
+				opacity: 0.5;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 18px;
+				margin: 0;
+			}
+		}
+		&:hover .overlay{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

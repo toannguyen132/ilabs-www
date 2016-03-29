@@ -143,6 +143,31 @@ angular.module('demo', ['zumba.angular-waypoints'])
 	}, function(newValue, oldvalue){
 		$scope.current = newValue;
 	});
+})
+.controller('aboutController', function($scope){
+	$scope.$watch('wp.services.down');
+})
+.directive('animatedIcon', function(){
+	return {
+		restrict: "A",
+		scope: false,
+		link: function(scope, element, attrs){
+			scope.$watch('wp.services.down', function(newValue, oldValue){
+				if (newValue !== oldValue && newValue){
+					// element.find('svg path').css('stroke-dashoffset', 0);
+				}
+			});
+
+			// 
+			element.find('svg path').each(function(){
+				// console.log( this.getTotalLength() );
+				var length = this.getTotalLength();
+				$(this).css("stroke-dasharray", length + ' ' + length);
+				$(this).css("stroke-dashoffset", length);
+				$(this).css("transition", "600ms all");
+			});
+		}
+	}
 });
 
 },{"angular":3,"angular-waypoints":2,"d3":4,"jquery":6,"tweenmax":5}],2:[function(require,module,exports){

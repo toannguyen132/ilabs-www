@@ -3,6 +3,7 @@ header{
 	width: 100%;
 	padding: $padding-df 0;
 	.logo{
+		float: left;
 		img{
 			filter: grayscale(100%);
 			transition: all 600ms;
@@ -39,4 +40,12 @@ body.finish-intro{
 			filter: grayscale(0);
 		}
 	}
+}
+.page-title{
+	font-weight: 400;
+	font-size: 1.8rem;
+	color: $heading;
+	letter-spacing: 0.5px;
+	text-align: center;
+	margin: 10px 0;
 }

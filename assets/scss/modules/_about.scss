@@ -178,3 +178,61 @@
 		}
 	}
 }
+
+.about-region{
+	padding: 70px 0;
+
+	.map-container{
+		@media (min-width: $desktop-min){
+			padding-left: 170px;
+		}
+	}
+
+	.map{
+		background-image: url("../img/map@2x.png");
+		background-size: contain;
+		background-position: right top;
+		background-repeat: no-repeat;
+		position: relative;
+		@include aspect-ratio(1006,548);
+
+		.marker{
+			display: block;
+			width: 33px;
+			height: 28px;
+			background-image: url("../img/map-logo@2x.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			&.us{
+				top: 22%;
+    			left: 7%;
+			}
+			&.vn{
+				top: 42%;
+    			left: 82.7%;
+			}
+			&.cn{
+			    top: 22%;
+			    left: 78.3%;
+			}
+		}
+	}
+
+	.section-content{
+		text-align: center;
+		line-height: 1.6em;
+		@media (min-width: $tablet-min){
+			text-align: left;
+			width: 333px;
+			position: absolute;
+			top: 50%;
+		}
+		.heading{
+			font-weight: 400;
+			font-size: 2.4rem;
+			letter-spacing: 0.6px;
+			line-height: 1.5em;
+		}
+	}
+}

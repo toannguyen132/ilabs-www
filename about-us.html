@@ -10,33 +10,34 @@
 <body class="finish-intro" ng-controller="aboutController">
 	<header zum-waypoint="wp" down="header.down">
 		<div class="container">
-			<div class="menu-trigger animate-bottom-up delay1000" ng-class="{ showup: wp.header.down }">
+			<div class="menu-trigger animate-bottom-up" ng-class="{ showup: wp.header.down }">
 				<a href="#" class="hamburger">
 					<div class="bar top"></div>
 					<div class="bar bottom"></div>
 				</a>
 			</div>
-			<div class="logo animate-bottom-up delay1000" ng-class="{ showup: wp.header.down }">
+			<div class="logo animate-bottom-up" ng-class="{ showup: wp.header.down }">
 				<img src="public/img/logo.svg" alt="Interactive Labs">
 			</div>	
-			<h1 class="page-title">About Us</h1>
+			<h1 class="page-title animate-bottom-up" ng-class="{ showup: wp.header.down }">About Us</h1>
 		</div>
 	</header>
 
-	<div class="about-intro">
+	<div class="about-intro" zum-waypoint="wp" down="intro.down" offset="100%">
+		<div class="bg animation-edge-left" ng-class="{ showup: wp.intro.down }"></div>
 		<div class="container relative">
 			<div class="intro-content">
-				<h2 class="section-heading">Our expertise</h2>
-				<p class="desc">Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa. Cray paleo tattooed, Truffaut skateboard street art PBR jean shorts Shoreditch farm-to-table.</p>
+				<h2 class="section-heading animation-edge-right animation-delay200" ng-class="{ showup: wp.intro.down }">Our expertise</h2>
+				<p class="desc animation-edge-right animation-delay400" ng-class="{showup: wp.intro.down}">Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa. Cray paleo tattooed, Truffaut skateboard street art PBR jean shorts Shoreditch farm-to-table.</p>
 			</div>
 		</div>
 	</div>
 
-	<div class="about-services section-white" zum-waypoint="wp" down="services.down">
+	<div class="about-services section-white" zum-waypoint="wp" down="services.down" offset="70%">
 		<div class="container">
-			<h2 class="heading">Our Services</h2>
+			<h2 class="heading animation-edge-left" ng-class="{ showup: wp.services.down }">Our Services</h2>
 			<div class="services-list">
-				<div class="service">
+				<div class="service animate-face-zoom-in delay200" ng-class="{ showup: wp.services.down }">
 					<span class="icon" animated-icon>
 						<svg width="63px" height="63px" viewBox="0 0 63 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <g id="Visual-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -74,7 +75,7 @@
 					</span>
 					<span class="desc"><span>Visual Design</span></span>
 				</div>
-				<div class="service">
+				<div class="service animate-face-zoom-in delay400" ng-class="{ showup: wp.services.down }">
 					<span class="icon">
 						<svg width="63px" height="66px" viewBox="0 0 63 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -100,7 +101,7 @@
 					</span>
 					<span class="desc"><span>UX Design</span></span>
 				</div>
-				<div class="service">
+				<div class="service animate-face-zoom-in delay600" ng-class="{ showup: wp.services.down }">
 					<span class="icon">
 						<svg width="63px" height="53px" viewBox="0 0 63 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -137,7 +138,7 @@
 					<span class="desc"><span>Development</span></span>
 				</div>
 				<span class="line-break"></span>
-				<div class="service">
+				<div class="service animate-face-zoom-in delay800" ng-class="{ showup: wp.services.down }">
 					<span class="icon">
 						<svg width="63px" height="66px" viewBox="0 0 63 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -150,7 +151,7 @@
 					</span>
 					<span class="desc"><span>Product <br>Management</span></span>
 				</div>
-				<div class="service">
+				<div class="service animate-face-zoom-in delay1000" ng-class="{ showup: wp.services.down }">
 					<span class="icon">
 						<svg width="54px" height="69px" viewBox="0 0 54 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -173,7 +174,7 @@
 					</span>
 					<span class="desc"><span>Help &amp; Support</span></span>
 				</div>
-				<div class="service">
+				<div class="service animate-face-zoom-in delay1200" ng-class="{ showup: wp.services.down }">
 					<span class="icon">
 						<svg width="63px" height="63px" viewBox="0 0 63 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -286,20 +287,20 @@
 		</div>
 	</div>
 
-	<div class="about-region section-white">
+	<div class="about-region section-white" zum-waypoint="wp" down="region.down" offset="70%">
 		<div class="container relative">
 			<div class="map-container">
 				<div class="map">
 					<div class="content">
-						<span class="us marker"></span>
-						<span class="vn marker"></span>
-						<span class="cn marker"></span>
+						<span class="us marker animate-fade" ng-class="{showup: wp.region.down}"></span>
+						<span class="vn marker animate-fade delay400" ng-class="{showup: wp.region.down}"></span>
+						<span class="cn marker animate-fade delay200" ng-class="{showup: wp.region.down}"></span>
 					</div>
 				</div>
 			</div>
 			<div class="section-content">
-				<h2 class="heading">There are no sundown at Interactivelabs</h2>
-				<p>With world wide team, we’re always up to work and support our clients.</p>
+				<h2 class="heading animation-edge-left animation-delay500" ng-class="{showup: wp.region.down}">There are no sundown at Interactivelabs</h2>
+				<p class="animation-edge-left animation-delay700" ng-class="{showup: wp.region.down}">With world wide team, we’re always up to work and support our clients.</p>
 			</div>
 		</div>
 	</div>

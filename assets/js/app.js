@@ -144,7 +144,7 @@ angular.module('demo', ['zumba.angular-waypoints'])
 	});
 })
 .controller('aboutController', function($scope){
-	$scope.$watch('wp.services.down');
+	
 })
 .directive('animatedIcon', function(){
 	return {

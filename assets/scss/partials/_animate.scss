@@ -20,6 +20,12 @@
 	100% { transform: translateX(0px); }
 }
 
+@keyframes bounce-right{
+	0% { transform: translateX(2000px); }
+	70% { transform: translateX(-20px); }
+	100% { transform: translateX(0px); }
+}
+
 @keyframes bounce-top-down{
 	0% { transform: translateY(-1000px); }
 	70% { transform: translateY(20px); }
@@ -43,6 +49,7 @@
 .animate-fade{
 	opacity: 0;
 	visibility: hidden;
+	transition-duration: 800ms;
 	&.showup{
 		opacity: 1;
 		visibility: visible;
@@ -72,6 +79,18 @@
 	}
 }
 
+.animation-edge-right{
+	display: inline-block;
+	animation-name: bounce-right;
+	animation-duration: 600ms;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	transform: translateX(2000px);
+	&.showup{
+		animation-play-state: running;
+	}
+}
+
 .animation-edge-top{
 	display: inline-block;
 	animation-name: bounce-top-down;
@@ -81,6 +100,19 @@
 	transform: translateY(-1000px);
 	&.showup{
 		animation-play-state: running;
+	}
+}
+
+.animate-face-zoom-in{
+	transition-property: all;
+	transition-duration: 800ms;
+	transform: scale(1.5);
+	opacity: 0;
+	visibility: hidden;
+	&.showup{
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
 	}
 }
 

@@ -184,6 +184,12 @@
 			opacity: 1;
 			visibility: visible;
 		}
+		.stat{
+			@include aspect-ratio(1,1);
+			width: 90%;
+			position: absolute;
+			bottom: $padding-df;
+		}
 	}
 }
 

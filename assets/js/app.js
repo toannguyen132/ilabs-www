@@ -3,6 +3,7 @@ var $ = require('jquery');
 var TweenMax = require('tweenmax');
 var d3 = require('d3');
 require('angular-waypoints');
+var radarChart = require('./radar.js');
 // more code here
 
 angular.module('demo', ['zumba.angular-waypoints'])
@@ -143,8 +144,34 @@ angular.module('demo', ['zumba.angular-waypoints'])
 		$scope.current = newValue;
 	});
 })
-.controller('aboutController', function($scope){
-	
+.directive('radarChart', function(){
+	return {
+		restrict: "A",
+		scope: false,
+		link: function(scope, element, attrs){
+			var d = [
+				[
+					{axis:"LEADER",value:0.8},
+					{axis:"SMART",value:0.6},
+					{axis:"VISION",value:0.8},
+					{axis:"KIND",value:0.3},
+					{axis:"FUNNY",value:0.5},
+				]
+			];
+			var w = element.width() - 100;
+			var h = element.height() - 100;
+
+			radarChart.draw( '#radar-1', d, { 
+				w: w, 
+				h: h,
+				levels: 2,
+				ExtraWidthX: 100,
+				ExtraWidthY: 100,
+				TranslateX: 50,
+				TranslateY: 60,
+			});
+		}
+	}
 })
 .directive('animatedIcon', function(){
 	return {

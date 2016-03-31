@@ -4,7 +4,7 @@
 }
 
 // $time: 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300;
-@for $i from 1 to 14{
+@for $i from 1 to 20{
 	$delay: $i * 100;
 	.delay#{$delay}{
 		transition-delay: #{$delay}ms;
@@ -46,10 +46,18 @@
 	100% { transform: translateY(0px) }
 }
 
+%fadeout{
+	opacity: 0;
+	visibility: hidden;
+}
+%fadein{
+	opacity: 1;
+	visibility: visible;
+}
+
 .animate-fade{
 	opacity: 0;
 	visibility: hidden;
-	transition-duration: 800ms;
 	&.showup{
 		opacity: 1;
 		visibility: visible;
@@ -62,6 +70,17 @@
 	transform: translateY(20px);
 	&.showup{
 		transform: translateY(0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.animate-face-zoom-in{
+	transform: scale(1.5);
+	opacity: 0;
+	visibility: hidden;
+	&.showup{
+		transform: scale(1);
 		opacity: 1;
 		visibility: visible;
 	}
@@ -103,19 +122,6 @@
 	}
 }
 
-.animate-face-zoom-in{
-	transition-property: all;
-	transition-duration: 800ms;
-	transform: scale(1.5);
-	opacity: 0;
-	visibility: hidden;
-	&.showup{
-		transform: scale(1);
-		opacity: 1;
-		visibility: visible;
-	}
-}
-
 .animation-ball{
 	animation-name: ball-bounce;
 	animation-duration: 1000ms;
@@ -131,13 +137,14 @@
 		animation-timing-function: linear step-end;
 	}
 }
+
 body.finish-intro{
 	.animation-ball{
 		animation: none;
 	}
 }
 
-.animation-hero-object{
+.animate-hero-object{
 	animation-name: hero-object;
 	animation-duration: 3000ms;
 	animation-play-state: paused;
@@ -147,5 +154,38 @@ body.finish-intro{
 
 	&.showup{
 		animation-play-state: running;
+	}
+}
+
+.animate-fade-left{
+	transform: translateX(-40px);
+	@extend %fadeout;
+	&.showup{
+		transform: translateX(0);
+		@extend %fadein;
+	}
+}
+.animate-fade-right{
+	transform: translateX(40px);
+	@extend %fadeout;
+	&.showup{
+		transform: translateX(0);
+		@extend %fadein;
+	}
+}
+.animate-fade-top{
+	transform: translateY(-40px);
+	@extend %fadeout;
+	&.showup{
+		transform: translateY(0);
+		@extend %fadein;
+	}
+}
+.animate-fade-bottom{
+	transform: translateY(40px);
+	@extend %fadeout;
+	&.showup{
+		transform: translateY(0);
+		@extend %fadein;
 	}
 }

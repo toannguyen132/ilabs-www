@@ -302,7 +302,7 @@ var RadarChart = {
 		.attr("text-anchor", "middle")
 		.attr("dy", "1.5em")
 		.attr("transform", function(d, i){return "translate(0, -10)"})
-		.attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total))-30*Math.sin(i*cfg.radians/total);})
+		.attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total))-35*Math.sin(i*cfg.radians/total);})
 		.attr("y", function(d, i){return cfg.h/2*(1-Math.cos(i*cfg.radians/total))-20*Math.cos(i*cfg.radians/total);});
 
  
@@ -322,7 +322,8 @@ var RadarChart = {
 					 .append("polygon")
 					 .attr("class", "radar-chart-serie"+series)
 					 .style("stroke-width", "2px")
-					 .style("stroke", cfg.color(series))
+					 .style("stroke", '#fff')
+					 // .style("stroke", cfg.color(series))
 					 .attr("points",function(d) {
 						 var str="";
 						 for(var pti=0;pti<d.length;pti++){
@@ -330,7 +331,8 @@ var RadarChart = {
 						 }
 						 return str;
 					  })
-					 .style("fill", function(j, i){return cfg.color(series)})
+					 .style("fill", function(j, i){return '#fff' })
+					 // .style("fill", function(j, i){return cfg.color(series)})
 					 .style("fill-opacity", cfg.opacityArea)
 					 .on('mouseover', function (d){
 										z = "polygon."+d3.select(this).attr("class");
@@ -369,7 +371,8 @@ var RadarChart = {
 		  return cfg.h/2*(1-(Math.max(j.value, 0)/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total));
 		})
 		.attr("data-id", function(j){return j.axis})
-		.style("fill", cfg.color(series)).style("fill-opacity", .9)
+		.style("fill", '#fff').style("fill-opacity", .9)
+		// .style("fill", cfg.color(series)).style("fill-opacity", .9)
 		.on('mouseover', function (d){
 					newX =  parseFloat(d3.select(this).attr('cx')) - 10;
 					newY =  parseFloat(d3.select(this).attr('cy')) - 5;
@@ -378,6 +381,7 @@ var RadarChart = {
 						.attr('x', newX)
 						.attr('y', newY)
 						.text(Format(d.value))
+						.attr('fill', '#fff')
 						.transition(200)
 						.style('opacity', 1);
 						

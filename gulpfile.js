@@ -42,7 +42,7 @@ gulp.task('watch', function(){
 	browserify_tasks.forEach(function(task){
 		gulp.watch(['assets/js/'+task+'.js'], ['browserify-' + task ]);
 	});
-	gulp.watch(['assets/js/app.js'], ['browserify']);
+	gulp.watch(['assets/js/*.js'], ['browserify']);
 	gulp.watch(['assets/scss/*', 'assets/scss/**/*'], ['sass']);
 });
 

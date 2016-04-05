@@ -1,5 +1,5 @@
 .processing{
-	height: 1000px;
+	height: 2000px;
 }
 .process-item{
 	display: block;
@@ -68,6 +68,7 @@
 .process-item{
 	$l1: 50px;
 	$l2: 463px;
+	$l3: 840px;
 	margin-left: -60px;
 
 	&.discover{
@@ -81,6 +82,18 @@
 	&.prototype{
 		top: $l2;
 		right: 19%;
+	}
+	&.look{
+		top: $l3;
+		left: 19%;	
+	}
+	&.user-testing{
+		top: $l3;
+		left: 56%;
+	}
+	&.iteration{
+		top: $l3;
+		left: 90%;
 	}
 }
 

@@ -1,0 +1,86 @@
+.processing{
+	height: 1000px;
+}
+.process-item{
+	display: block;
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	.inner{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.icon{
+		display: block;
+		height: 100%;
+		text-align: right;
+		position: relative;
+		img{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
+	.title{
+		position: absolute;
+		top: 50%;
+		right: 105%;
+		height: 30px;
+		margin-top: -15px;
+		width: 200px;
+		text-align: right;
+		display: block;
+
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: $heading;
+		letter-spacing: 0.5px;
+		line-height: 30px;
+	}
+	.est{
+		position: absolute;
+		bottom: -15px;
+		right: 58%;
+		height: 30px;
+		line-height: 30px;
+		/* 2 H: */
+		font-family: $bebas;
+		font-weight: 700;
+		font-size: 2.4rem;
+		color: #AAB2B7;
+	}
+}
+
+.connect{
+	position: absolute;
+
+	&.connect-1{
+		top: 166px;
+		left: 29%;
+	}
+	&.connect-2{
+		top: 464px;
+		left: 35%;
+	}
+}
+
+.process-item{
+	$l1: 50px;
+	$l2: 463px;
+	margin-left: -60px;
+
+	&.discover{
+		top: 50px;
+		left: 50%;
+	}
+	&.ideal{
+		top: $l2;
+    	left: 31%;
+	}
+	&.prototype{
+		top: $l2;
+		right: 19%;
+	}
+}
+

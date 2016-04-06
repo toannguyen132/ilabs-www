@@ -36,7 +36,7 @@
 		font-weight: 600;
 		color: $heading;
 		letter-spacing: 0.5px;
-		line-height: 30px;
+		line-height: 1.4em;
 	}
 	.est{
 		position: absolute;
@@ -63,12 +63,50 @@
 		top: 464px;
 		left: 35%;
 	}
+	&.connect-3{
+		top: 571px;
+		left: 17%;
+	}
+	&.connect-4{
+		top: 900px;
+		left: 22.5%;
+	}
+	&.connect-5{
+		top: 900px;
+		left: 60%;
+	}
+	&.connect-6{
+	    top: 1000px;
+	    left: 88%;
+	}
+	&.connect-7{
+		top: 1366px;
+		left: 54%;
+	}
+	&.connect-8{
+		top: 1366px;
+		left: 17%;
+	}
+	&.connect-9{
+		top: 1494px;
+		left: 17%;
+	}
+	&.connect-10{
+		top: 1709px;
+		left: 23%;
+	}
+	&.connect-11{
+		top: 1709px;
+		left: 61%;
+	}
 }
 
 .process-item{
 	$l1: 50px;
 	$l2: 463px;
-	$l3: 840px;
+	$l3: 895px;
+	$l4: 1388px;
+	$l5: 1709px;
 	margin-left: -60px;
 
 	&.discover{
@@ -93,6 +131,32 @@
 	}
 	&.iteration{
 		top: $l3;
+		left: 90%;
+	}
+	/** level 4 **/
+	&.ship{
+		top: $l4;
+		left: 90%;
+	}
+	&.tech{
+		top: $l4;
+		left: 56%;
+	}
+	&.development{
+		top: $l4;
+		left: 19%;
+	}
+	/** level 5 **/
+	&.interaction{
+		top: $l5;
+		left: 19%;
+	}
+	&.qa{
+		top: $l5;
+		left: 56%;
+	}
+	&.maintain{
+		top: $l5;
 		left: 90%;
 	}
 }

@@ -1,5 +1,28 @@
 .processing{
-	height: 2000px;
+	height: 2144px;
+	position: relative;
+}
+
+.processing-part{
+	position: absolute;
+	width: 100%;
+	height: 800px;
+	background-color: #fff;
+	z-index: -1;
+	.heading{
+		margin-top: -26px;
+		font-weight: 300;
+		font-size: 2.4rem;
+		color: $heading;
+		letter-spacing: 0.6px;
+	}
+
+	&.part-design{
+		top: 314px;
+	}
+	&.part-development{
+		top: 1274px;
+	}
 }
 .process-item{
 	display: block;
@@ -49,6 +72,32 @@
 		font-weight: 700;
 		font-size: 2.4rem;
 		color: #AAB2B7;
+	}
+	.tooltips{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		.info{
+			display: block;
+			font-size: 12px;
+			line-height: 22px;
+			vertical-align: middle;
+			color: #fff;
+			cursor: pointer;
+			height: 100%;
+			background-color: #BDC3C7;
+			border-radius: 10px;
+			text-align: center;
+		}
+		.tooltip-popup{
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 600ms;
+		}
 	}
 }
 

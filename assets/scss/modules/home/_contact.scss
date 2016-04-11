@@ -1,18 +1,34 @@
 .contact-form{
 	padding: $padding-wide 0;
+	@media (max-width: $tablet-max){
+		padding-bottom: 0;
+	}
 	.row{
-		margin-left: -25px;
-		margin-right: -25px;
+		// margin-left: -25px;
+		// margin-right: -25px;
+		// @media (max-width: $tablet-max){
+		// 	margin-left: -15px;
+		// 	margin-right: -15px;
+		// }
 		[class*="col-"]{
 			padding-left: 25px;
 			padding-right: 25px;
+			@media (max-width: $tablet-max){
+				&.address-container{
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
 		}
 	}
 	.address-box{
 		padding: 40px;
 		background-color: #fff;
-		@media (min-width: $tablet-min){
+		@media (min-width: $desktop-min){
 			padding-top: 150px;
+		}
+		@media (max-width: $tablet-max){
+			text-align: center;
 		}
 		.logo{
 			margin: 50px 0 15px 0;
@@ -38,6 +54,7 @@
 
 			.wide{
 				width: 400px;
+				max-width: 100%;
 			}
 
 			input{
@@ -59,13 +76,21 @@
 				border-radius: 0;
 				outline: none;
 			}
+
+
 		}
-		@media (min-width: $tablet-min){
+		@media (max-width: $tablet-max){
+			.section-heading{
+				margin-bottom: $padding-wide;
+			}
+		}
+		@media (min-width: $desktop-min){
 			padding-top: 150px;
 			.section-heading{
 				position: absolute;
 				top: $padding-wide;
 				left: -100px;
+				z-index: 10;
 			}
 		}
 	}

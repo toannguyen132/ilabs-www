@@ -15,21 +15,61 @@
 
 	}
 
-	@media (min-width: $desktop-min){
+	@media (max-width: $mobile-max){
+		.content-box{
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+		.culture-image{
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+
+	@media (min-width: $tablet-min){
 		margin-bottom: 120px;
 		.content-box{
-			width: 635px;
-			position: absolute;
-			top: 212px;
-			left: 46%;
-			transform: translate(-50%);
-			padding: 100px 100px 100px $padding-wide;
+			width: 400px;
+			padding: 100px 100px 40px $padding-wide;
 			h2{
 				display: block;
 				position: absolute;
 				top: -52px;
 			}
 			z-index: 1;
+		}
+		@media (max-width: $desktop-max){
+			.content-box{
+				margin-top: 212px;
+			}
+			.culture-image{
+				right: 15px;
+				position: absolute;
+				top: 0;
+				z-index: 10;
+			}	
+		}
+	}
+
+	@media (min-width: $desktop-min) and (max-width: $desktop-max){
+		.content-box{
+			width: 635px;
+			margin-top: 212px;
+			padding: 100px 100px 100px $padding-wide;
+		}
+		.culture-image{
+			left: 675px;
+			top: 0;
+			z-index: 10;
+		}	
+	}
+
+	@media (min-width: $desktop-lg-min){
+		.content-box{
+			left: 46%;
+			position: absolute;
+			top: 212px;
+			transform: translate(-50%);
 		}
 		.culture-image{
 			position: relative;

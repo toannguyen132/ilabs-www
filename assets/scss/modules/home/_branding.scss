@@ -17,13 +17,16 @@
 	}
 
 	.branding-box{
-		width: 312px;
+		position: relative;
 		padding: 60px 40px;
-		background-color: rgba(255,255,255,0.5);
+		background-color: rgba(255,255,255,0.8);
 		.section-heading{
 			margin-bottom: $padding-df;
 		}
+
 		@media (min-width: $tablet-min){
+			background-color: rgba(255,255,255,0.5);
+			width: 312px;
 			position: absolute;
 			left: 0;
 			top: 45%;

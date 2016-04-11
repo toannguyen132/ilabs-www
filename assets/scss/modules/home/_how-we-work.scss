@@ -1,9 +1,15 @@
 .how-we-work{
 	.heading{
 		padding: $padding-wide;
-		background-color: #fff;
 		@media (min-width: $tablet-min){
 			float: right;
+			background-color: #fff;
+		}
+		@media (max-width: $mobile-max){
+			padding: $padding-df;
+			h2{
+				@extend .section-heading;	
+			}
 		}
 	}
 
@@ -13,6 +19,9 @@
 			position: relative;
 			padding: 118px 15px 15px 37px;
 			display: inline-block;
+			@media (max-width: $mobile-max){
+				margin-bottom: $padding-wide;
+			}
 			span{
 				font-weight: 700;
 				font-size: 200px;

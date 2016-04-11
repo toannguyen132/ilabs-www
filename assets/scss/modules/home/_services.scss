@@ -2,28 +2,45 @@
 	padding: 130px 0 $padding-wide 0;
 }
 .service-list{
-	float: right;
 	padding: 110px 0;
-
+	@media (max-width: $tablet-max){
+		text-align: center;
+	}
+	@media (min-width: $desktop-min){
+		float: right;
+	}
 	.service-item{
-		display: inline-block;
-		margin: 0 $padding-wide;
+		padding: 0 $padding-wide;
 		text-align: center;
 		font-weight: 700;
+		margin-bottom: $padding-df;
+		vertical-align: top;
+
+		@media (max-width: $mobile-max){
+			margin-bottom: $padding-wide;
+		}
+		@media (min-width: $tablet-min){
+			display: inline-block;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		@media (min-width: $tablet-min) and (max-width: $tablet-max){
+			margin: 0 $padding-df;
+		}
 		p{
 			margin: $padding-df 0 0 0;
-		}
-		&:last-child{
-			margin-right: 0;
 		}
 	}
 }
 .service-heading{
-	float: left;
 	position: relative;
 	padding: 108px 0;
 	background-color: #fff;
 	width: 280px;
+	@media (min-width: $desktop-min){
+		float: left;
+	}
 	.flash{
 		position: absolute;
 		top: 50%; 

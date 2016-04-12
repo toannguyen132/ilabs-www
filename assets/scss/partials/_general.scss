@@ -10,6 +10,10 @@ body{
 	background-color: $page-bg;
 	color: $gray;
 	overflow-x: hidden;
+	@media (max-width: $tablet-max){
+		overflow-x: hidden;
+		max-width: 100%;
+	}
 }
 strong{
 	color: $heading;

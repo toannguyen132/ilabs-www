@@ -25,9 +25,7 @@
 	}
 	@media (max-width: $tablet-max){
 		padding-top: 100px;
-		.container{
-			height: 70vh;
-		}	
+    	padding-bottom: 350px;
 	}
 	.intro-content{
 		@media (min-width: $desktop-min){

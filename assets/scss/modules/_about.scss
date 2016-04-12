@@ -12,30 +12,47 @@
 		background-position: 30px center;
 		background-repeat: no-repeat;
 		z-index: 1;
+		@media (max-width: $tablet-max){
+			background-position: 30px bottom;
+		}
 	}
 
 	@media (min-width: $tablet-min){
 		margin-top: 30px;
 		.container{
-			height: 893px;	
+			height: 893px;
 		}
 	}
+	@media (max-width: $tablet-max){
+		padding-top: 100px;
+		.container{
+			height: 70vh;
+		}	
+	}
 	.intro-content{
-		@media (min-width: $tablet-min){
+		@media (min-width: $desktop-min){
 			position: absolute;
 			right: 0;
 			top: 40%;
 			width: 415px;
 		}
+		@media (max-width: $tablet-max){
+			width: 415px;
+			max-width: 100%;
+			margin: 0 auto;
+			text-align: center;
+		}
 		h2{
 			margin-bottom: $padding-df;
 		}
 	}
+
 }
 
 .about-services{
 	position: relative;
 	padding: 220px 0 100px 0;
+	margin-top: -110px;
 	@media (min-width: $tablet-min){
 		margin-top: -220px;
 	}
@@ -153,6 +170,10 @@
 			text-align: center;
 			z-index: 1;
 			transition: all 300ms;
+			@media (max-width: $tablet-max){
+				opacity: 1;
+				visibility: visible;
+			}
 			.overlay-bg{
 				position: absolute;
 				top: 0;

@@ -3,25 +3,25 @@
 <head>
 	<title>Ilabs www</title>
 	<meta name="charset" content="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" href="public/css/bootstrap.css">
 	<link rel="stylesheet" href="public/css/app.css">
 </head>
 <body>
 	<header zum-waypoint="wp" down="header.down">
 		<div class="container">
-			<div class="menu-trigger animate-bottom-up delay1000" ng-class="{ showup: wp.header.down }">
+			<div class="menu-trigger animate-bottom-up delay500" ng-class="{ showup: wp.header.down }">
 				<a href="#" class="hamburger">
 					<div class="bar top"></div>
 					<div class="bar bottom"></div>
 				</a>
 			</div>
-			<div class="logo animate-bottom-up delay1000" ng-class="{ showup: wp.header.down }">
+			<div class="logo animate-bottom-up delay500" ng-class="{ showup: wp.header.down }">
 				<img src="public/img/logo.svg" alt="Interactive Labs">
 			</div>	
 		</div>
 	</header>
-	<div class="landing">
+	<div class="landing hidden-xs hidden-sm">
 		<div class="container">
 			<div class="welcome">
 				<h1><span class="animation-edge-left" ng-class="{ showup: wp.header.down }">We're</span>  <br>
@@ -80,6 +80,39 @@
 					</div>
 				</div>
 				<div class="shadow object-container" object-parralax speed="15">
+					<div class="object-inner">
+						<img src="public/img/shadow.png" srcset="public/img/shadow2x.png 2x" width="939" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="landing visible-xs visible-sm">
+		<div class="welcome">
+			<h1><span class="animate-fade-bottom" ng-class="{ showup: wp.header.down }">We're</span>  <br>
+				<span class="animate-fade-bottom delay300" ng-class="{ showup: wp.header.down }">Interactivelabs</span></h1>
+		</div>
+
+		<div class="object-parallax">
+			<!-- <div class="backdrop"></div> -->
+			<div class="color overlay animate-fade delay500" ng-class="{ showup: wp.header.down }">
+				<div class="object-3 object-container">
+					<div class="object-inner">
+						<img src="public/img/pencil.png" srcset="public/img/pencil2x.png 2x" width="136" alt="">
+					</div>
+				</div>
+				<div class="object-2 object-container">
+					<div class="object-inner">
+						<img src="public/img/book.png" srcset="public/img/book2x.png 2x" width="328" alt="">
+					</div>
+				</div>
+				<div class="object-1 object-container">
+					<div class="object-inner">
+						<img src="public/img/lingtning.png" srcset="public/img/lingtning2x.png 2x" width="373" alt="">
+					</div>
+				</div>
+				<div class="shadow object-container">
 					<div class="object-inner">
 						<img src="public/img/shadow.png" srcset="public/img/shadow2x.png 2x" width="939" alt="">
 					</div>

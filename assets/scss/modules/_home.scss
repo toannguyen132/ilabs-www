@@ -120,6 +120,52 @@
 	margin: 0;
 }
 
+/** landing mobile **/
+@media (max-width: $tablet-max){
+	.landing{
+		height: auto;
+		padding: 100px 0;
+		.welcome{
+			position: relative;
+			top: 0;
+			h1{
+				@media (max-width: $mobile-max){
+					font-size: 3rem;
+				}
+				text-align: center;
+				span{
+					display: inline-block;
+				}
+			}
+		}
+
+		.object-parallax{
+			position: relative;
+			width: 100%;
+			top: auto;
+			left: auto;
+			height: 50vh;
+			.shadow img{
+				width: 80vw;
+				height: auto;
+			}
+			[class*="object-"]{
+				.object-inner{
+					transform: translate(0);
+				}
+			}
+			.object-1 img{
+				width: 30vw;
+				height: auto;
+			}
+			.object-2 img, .object-3 img{
+				width: 20vw;
+				height: auto
+			}
+		}
+	}
+}
+
 @import "home/services";
 @import "home/culture";
 @import "home/branding";

@@ -54,10 +54,10 @@
 
 			.wide{
 				width: 400px;
-				max-width: 100%;
 			}
 
 			input{
+				max-width: 100%;
 				padding: 5px 10px;
 				background-color: transparent;
 				border-top: 0;
@@ -67,6 +67,7 @@
 				outline: none;
 			}
 			select{
+				max-width: 100%;
 				padding: 5px 10px;
 				appearance: none;
 				border-top: 0;

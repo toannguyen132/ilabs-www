@@ -183,6 +183,7 @@
 		color: $number-color;
 		letter-spacing: 0.66px;
 		vertical-align: middle;
+
 		&:before{
 			content: "";
 			width: 100%;
@@ -195,20 +196,31 @@
 			background-repeat: no-repeat;
 			background-position: center;
 		}
+		@media (max-width: $tablet-max){
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
 		@media (min-width: $desktop-min){
 			float: left;
 		}
 	}
 	.introduce{
-		max-width: 750px;
+		max-width: 990px;
 		margin: 0 auto;
 		font-size: 1.8rem;
 		margin-bottom: 50px;
+		padding-left: 120px;
+		padding-right: 120px;
 		.title{
 			font-size: 48px;
 			color: #2C3E50;
 			letter-spacing: 0.66px;
 			margin: 0 0 $padding-wide 0;
+		}
+
+		@media (max-width: $desktop-min){
+
 		}
 	}
 

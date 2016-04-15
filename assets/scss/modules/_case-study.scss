@@ -44,12 +44,18 @@
 		padding: 0 $padding-wide * 2;
 		position: relative;
 		@extend .clearfix;
+		@media (max-width: $mobile-max){
+			padding: 0;
+		}
 	}
 	.thumb{
 		width: 40%;
 		text-align: center;
 		display: inline-block;
 		vertical-align: middle;
+		@media (max-width: $mobile-max){
+			width: 100%;
+		}
 		img{
 			max-width: 100%;
 		}
@@ -64,6 +70,10 @@
 		width: 59%;
 		position: relative;
 		height: 100%;
+		@media (max-width: $mobile-max){
+			width: 100%;
+			text-align: center;
+		}
 		.heading{
 			font-weight: 300;
 			font-size: 4.8rem;
@@ -212,6 +222,7 @@
 		margin-bottom: 50px;
 		padding-left: 120px;
 		padding-right: 120px;
+
 		.title{
 			font-size: 48px;
 			color: #2C3E50;
@@ -219,8 +230,9 @@
 			margin: 0 0 $padding-wide 0;
 		}
 
-		@media (max-width: $desktop-min){
-
+		@media (max-width: $tablet-max){
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 
@@ -246,12 +258,21 @@
 			margin-right: $padding-wide;
 			display: inline-block;
 		}
+		@media (max-width: $mobile-max){
+			width: 100%;
+			margin-bottom: 50px;
+		}
 		.screen{
 			width: 414px;
 			height: 738px;
 			margin-bottom: 50px;
 			background: #FFFFFF;
 			box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.10);
+			@media (max-width: $mobile-max){
+				width: 100%;
+				@include aspect-ratio(414, 738);
+				margin-bottom: 25px;
+			}
 		}
 		.label{
 			line-height: 40px;
